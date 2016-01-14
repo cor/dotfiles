@@ -1,10 +1,9 @@
-
 " KEYBINDINGS
 imap jk <Esc>
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+nnoremap <C-j> <C-W><C-J>
+nnoremap <C-k> <C-W><C-K>
+nnoremap <C-l> <C-W><C-L>
+nnoremap <C-h> <C-W><C-H>
 nmap <silent> <F3> :NERDTreeToggle<CR>
 
 " OTHER
@@ -14,7 +13,7 @@ let NERDTreeShowBookmarks=1
 " LOOKS
 set number
 set cursorline
-set scrolloff=5
+set scrolloff=10
 syntax on
 
 " PLUGINS
