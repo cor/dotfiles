@@ -12,6 +12,7 @@ let NERDTreeShowBookmarks=1
 
 " LOOKS
 set number
+set nowrap
 set cursorline
 set scrolloff=10
 syntax on
