@@ -32,5 +32,6 @@ Plug 'posva/vim-vue'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'mattn/emmet-vim'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --tern-completer' }
+Plug 'vim-airline/vim-airline'
 
 call plug#end()
