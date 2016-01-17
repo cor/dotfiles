@@ -19,7 +19,6 @@ let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
 
 
-
 " KEYBINDINGS
 imap jk <Esc>
 nnoremap <C-j> <C-W><C-J>
@@ -47,10 +46,15 @@ syntax on
 set nocompatible
 set encoding=utf-8
 
+" PERFORMANCE
+" set scrolljump=5
+set lazyredraw
+set synmaxcol=180
 
 " PLUGINS
 call plug#begin('~/.vim/plugged')
 
+Plug 'jiangmiao/auto-pairs'
 Plug 'posva/vim-vue'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'mattn/emmet-vim'
