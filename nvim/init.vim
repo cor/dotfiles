@@ -38,6 +38,7 @@ set incsearch
 " LOOKS
 set number
 set nowrap
+set noshowmode
 set cursorline
 set scrolloff=10
 syntax on
