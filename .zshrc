@@ -1,3 +1,4 @@
+source ~/.iterm2_shell_integration.`basename $SHELL`
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 export TERM=xterm-256color
@@ -114,3 +115,5 @@ alias subl="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
 # added by travis gem
 [ -f /Users/cor/.travis/travis.sh ] && source /Users/cor/.travis/travis.sh
 
+
+test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh

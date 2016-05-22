@@ -41,6 +41,9 @@ set nowrap
 set noshowmode
 set cursorline
 set scrolloff=10
+set guifont=Inconsolata\ for\ Powerline:h15 
+let g:airline_powerline_fonts=1
+let g:airline#extensions#tabline#enabled = 1
 syntax on
 
 " required for YouCompleteMe
