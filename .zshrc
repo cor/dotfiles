@@ -101,11 +101,8 @@ alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO;
 killall Finder /System/Library/CoreServices/Finder.app'
 
 
-# enable "Z" plugin
-. `brew --prefix`/etc/profile.d/z.sh
-
 # enable syntax highlightning, must be at the *end* of this file
-source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export PATH=/usr/local/bin:$PATH
 
