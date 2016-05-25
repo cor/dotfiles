@@ -20,7 +20,7 @@ let g:airline_symbols.whitespace = 'Ξ'
 
 
 " KEYBINDINGS
-imap jk <Esc>
+imap jj <Esc>
 nnoremap <C-j> <C-W><C-J>
 nnoremap <C-k> <C-W><C-K>
 nnoremap <C-l> <C-W><C-L>
