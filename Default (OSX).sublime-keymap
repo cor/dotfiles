@@ -1,4 +1,4 @@
-// vim  jj -> esc
+// vim jj -> esc
 [
 	{ "keys": ["j", "j"], "command": "exit_insert_mode",
 		"context":
