@@ -1,10 +1,12 @@
-// vim  jj -> esc
-[
-	{ "keys": ["j", "j"], "command": "exit_insert_mode",
-		"context":
-		[
-			{ "key": "setting.command_mode", "operand": false },
-			{ "key": "setting.is_widget", "operand": false }
-		]
-	}
-]
+{
+	"caret_extra_width": 2,
+	"caret_style": "phase",
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
+	"font_face": "Inconsolata",
+	"font_size": 16,
+	// Vim simulation
+	"ignored_packages": [],
+	"vintage_start_in_command_mode": true,
+	"theme": "Material-Theme-Darker.sublime-theme"
+}
+
