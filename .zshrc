@@ -20,6 +20,8 @@ alias showcolors='for x in 0 1 4 5 7 8; do for i in `seq 30 37`; do for a in `se
 alias screensaverDesktop='/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background'
 alias la='ls -laG'
 
+alias startDocker='source /Applications/Docker/Docker\ Quickstart\ Terminal.app/Contents/Resources/Scripts/start.sh'
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
