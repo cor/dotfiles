@@ -104,8 +104,6 @@ killall Finder /System/Library/CoreServices/Finder.app'
 
 
 # enable syntax highlightning, must be at the *end* of this file
-source ~/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 export PATH=/usr/local/bin:$PATH
 
 # sublime text macro
