@@ -4,9 +4,10 @@
 	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
 	"font_face": "Inconsolata",
 	"font_size": 16,
-	"ignored_packages": [],
+	"ignored_packages":
+	[
+	],
 	"theme": "Material-Theme-Darker.sublime-theme",
 	"vintage_start_in_command_mode": true,
-	"hot_exit": false,
-	"remember_open_files": false
+	"highlight_line": true
 }
