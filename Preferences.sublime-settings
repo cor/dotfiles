@@ -4,9 +4,10 @@
 	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
 	"font_face": "Inconsolata",
 	"font_size": 16,
-	// Vim simulation
-	"ignored_packages": [],
+	"ignored_packages":
+	[
+	],
+	"theme": "Material-Theme-Darker.sublime-theme",
 	"vintage_start_in_command_mode": true,
-	"theme": "Material-Theme-Darker.sublime-theme"
+	"scroll_past_end": true
 }
-
