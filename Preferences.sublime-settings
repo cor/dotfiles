@@ -1,14 +1,22 @@
 {
+	"bold_folder_labels": true,
 	"caret_extra_width": 2,
 	"caret_style": "phase",
 	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
 	"font_face": "Inconsolata",
-	"font_size": 16,
+	"font_size": 17,
+	"highlight_line": true,
 	"ignored_packages":
 	[
 	],
-	"scroll_past_end": true,
+	"indent_guide_options":
+	[
+		"draw_normal",
+		"draw_active"
+	],
+	"line_padding_bottom": 3,
+	"line_padding_top": 3,
+	"overlay_scroll_bars": "enabled",
 	"theme": "Material-Theme-Darker.sublime-theme",
 	"vintage_start_in_command_mode": true
-
 }
