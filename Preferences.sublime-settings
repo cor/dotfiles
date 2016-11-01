@@ -7,7 +7,8 @@
 	"ignored_packages":
 	[
 	],
+	"scroll_past_end": true,
 	"theme": "Material-Theme-Darker.sublime-theme",
-	"vintage_start_in_command_mode": true,
-	"scroll_past_end": true
+	"vintage_start_in_command_mode": true
+
 }
