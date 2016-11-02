@@ -3,29 +3,21 @@ if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
 endif
 
-" unicode symbols
-let g:airline_left_sep = '»'
-let g:airline_left_sep = '▶'
-let g:airline_right_sep = '«'
-let g:airline_right_sep = '◀'
-let g:airline_symbols.crypt = '🔒'
-let g:airline_symbols.linenr = '␊'
-let g:airline_symbols.linenr = '␤'
-let g:airline_symbols.linenr = '¶'
-let g:airline_symbols.branch = '⎇'
-let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.paste = 'Þ'
-let g:airline_symbols.paste = '∥'
-let g:airline_symbols.whitespace = 'Ξ'
-
 
 " KEYBINDINGS
 imap jj <Esc>
+
+" Quick pane switching
 nnoremap <C-j> <C-W><C-J>
 nnoremap <C-k> <C-W><C-K>
 nnoremap <C-l> <C-W><C-L>
 nnoremap <C-h> <C-W><C-H>
+
+" Toggle NERDTree quickly
 nmap <silent> <F3> :NERDTreeToggle<CR>
+
+" Space as leader
+let mapleader=" "
 
 " OTHER
 " Show nerdtree bookmarks on startup
@@ -53,6 +45,24 @@ set encoding=utf-8
 " PERFORMANCE
 " set scrolljump=5
 set synmaxcol=180
+
+
+
+" NERDTree
+"
+" Open NERDTree on startup if there is no file argument
+function! StartUp()
+    if 0 == argc()
+        NERDTree
+    end
+endfunction
+
+autocmd VimEnter * call StartUp()
+
+" Automatically show hiden files in NERDTree
+let NERDTreeShowHidden=1
+
+
 
 " PLUGINS
 call plug#begin('~/.vim/plugged')
