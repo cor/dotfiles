@@ -10,20 +10,35 @@ endif
 imap jj <Esc>
 tnoremap <Esc> <C-\><C-n>
 
+" Space as leader
+let mapleader=" "
+
 " Pane switching
 nnoremap <C-j> <C-W><C-J>
 nnoremap <C-k> <C-W><C-K>
 nnoremap <C-l> <C-W><C-L>
 nnoremap <C-h> <C-W><C-H>
 
-" Space as leader
-let mapleader=" "
+" File/tab opening
+nmap <Leader>p <C-p>
+nmap <Leader>o :tabnew<CR>
+nmap <Leader>i :tabnew<CR>:term<CR>
+
 
 " Toggle NERDTree quickly
 nmap <Leader>t :NERDTreeToggle<CR>
 
 " Remove whitespace at end of line
 nmap <Leader>w :%s/\s\+$//e<CR>
+
+" Expand emmet code
+nmap <Leader>e <C-y>,
+
+" Relative numbers
+nmap <Leader>n :set invrelativenumber<CR>
+
+" Quickly replay 'q' macro
+nmap <Leader>q @q
 
 " OTHER
 " Show nerdtree bookmarks on startup
@@ -69,7 +84,21 @@ autocmd VimEnter * call StartUp()
 " Automatically show hiden files in NERDTree
 let NERDTreeShowHidden=1
 
-nmap <Leader>n :set invrelativenumber<CR>
+
+" Auto create parent dirs on file save
+function s:MkNonExDir(file, buf)
+    if empty(getbufvar(a:buf, '&buftype')) && a:file!~#'\v^\w+\:\/'
+        let dir=fnamemodify(a:file, ':h')
+        if !isdirectory(dir)
+            call mkdir(dir, 'p')
+        endif
+    endif
+endfunction
+augroup BWCCreateDir
+    autocmd!
+    autocmd BufWritePre * :call s:MkNonExDir(expand('<afile>'), +expand('<abuf>'))
+augroup END
+
 
 
 " PLUGINS
@@ -85,6 +114,7 @@ Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --tern-co
 Plug 'vim-airline/vim-airline'
 Plug 'morhetz/gruvbox'
 Plug 'tpope/vim-fugitive'
+Plug 'ctrlpvim/ctrlp.vim'
 
 call plug#end()
 
