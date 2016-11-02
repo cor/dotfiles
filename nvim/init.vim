@@ -22,6 +22,8 @@ let mapleader=" "
 " Toggle NERDTree quickly
 nmap <Leader>t :NERDTreeToggle<CR>
 
+" Remove whitespace at end of line
+nmap <Leader>w :%s/\s\+$//e<CR>
 
 " OTHER
 " Show nerdtree bookmarks on startup
@@ -37,7 +39,7 @@ set nowrap
 set noshowmode
 set cursorline
 set scrolloff=10
-set guifont=Inconsolata\ for\ Powerline:h15 
+set guifont=Inconsolata\ for\ Powerline:h15
 set background=dark
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled = 1
@@ -57,9 +59,9 @@ set synmaxcol=180
 "
 " Open NERDTree on startup if there is no file argument
 function! StartUp()
-    if 0 == argc()
-        NERDTree
-    end
+	if 0 == argc()
+		NERDTreeToggle
+	end
 endfunction
 
 autocmd VimEnter * call StartUp()
