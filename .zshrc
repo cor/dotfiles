@@ -7,18 +7,22 @@ export TERM=xterm-256color
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
+#ZSH_THEME="arrow"
 ZSH_THEME="arrow"
 
 dockip() {
   docker inspect --format '{{ .NetworkSettings.IPAddress }}' "$@"
 }
 
-
 # Usefull aliases
 alias fuck='eval $(thefuck --alias)'
 alias showcolors='for x in 0 1 4 5 7 8; do for i in `seq 30 37`; do for a in `seq 40 47`; do echo -ne "\e[$x;$i;$a""m\\\e[$x;$i;$a""m\e[0;37;40m "; done; echo; done; done; echo "";'
 alias screensaverDesktop='/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background'
 alias la='ls -laG'
+
+# Open book script
+alias ob='~/SchoolScripts/open-book.swift'
+alias eob='nvim ~/SchoolScripts/open-book.swift'
 
 alias startDocker='source /Applications/Docker/Docker\ Quickstart\ Terminal.app/Contents/Resources/Scripts/start.sh'
 
@@ -114,3 +118,4 @@ alias subl="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
 
 
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
+export GPG_TTY=$(tty)
