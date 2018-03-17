@@ -1,0 +1,6 @@
+" ===========
+" KEYBINDINGS
+" ===========
+
+" Back to normal mode
+imap jj <Esc>
