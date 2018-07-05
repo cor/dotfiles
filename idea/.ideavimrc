@@ -4,3 +4,4 @@
 
 " Back to normal mode
 imap jj <Esc>
+set shiftwidth=2

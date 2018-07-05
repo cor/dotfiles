@@ -14,3 +14,6 @@ alias eob='nvim ~/Setup/SchoolScripts/open-book.swift'
 
 export VISUAL=nvim
 export EDITOR="$VISUAL"
+export GPG_TTY=$(tty) #GPG fix for macOS
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
