@@ -15,6 +15,9 @@ set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 set incsearch
 set encoding=utf-8
 
+set undofile            " Use undofile for persistent undo
+set undodir=~/.vimundo/ " set a directory to store the undo history
+
 " =====
 " LOOKS
 " =====
@@ -86,6 +89,10 @@ Plug 'preservim/nerdtree'          " File browser
 Plug 'Xuyuanp/nerdtree-git-plugin' " Show git statusses in file browser
 Plug 'airblade/vim-gitgutter'      " Show git changes
 Plug 'godlygeek/tabular'           " Easy text align
+Plug 'ryanoasis/vim-devicons'      " File icons
+
+" HASKELL
+Plug 'neovimhaskell/haskell-vim'
 
 
 " RUST LANGUAGE SERVER 
@@ -120,7 +127,7 @@ call plug#end()
 " ======================
 syntax enable
 filetype plugin indent on
-colorscheme gruvbox
+colorscheme molokai
 
 
 " Set completeopt to have a better completion experience
@@ -149,6 +156,7 @@ end
 
 -- Enable rust_analyzer
 nvim_lsp.rust_analyzer.setup({ on_attach=on_attach })
+nvim_lsp.hls.setup({ on_attach=on_attach })
 
 EOF
 
