@@ -7,6 +7,9 @@
 # Neovim
 mkdir -p ~/.config/nvim/
 ln -s ~/Setup/dotfiles/nvim/init.vim ~/.config/nvim/init.vim 
+
+# GHCi
+ln -s ~/Setup/dotfiles/ghci/.ghci ~/.ghci
 #
 # # Idea
 # ln -s ~/Setup/dotfiles/idea/.ideavimrc ~/.ideavimrc
