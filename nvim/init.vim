@@ -1,11 +1,12 @@
-
+set nocompatible
 " ===========
 " KEYBINDINGS
 " ===========
 
 " Back to normal mode
 imap jj <Esc>
-tnoremap <Esc> <C-\><C-n>
+tnoremap <expr> <Esc> (&filetype == "fzf") ? "<Esc>" : "<c-\><c-n>"
+
 
 " =========
 " BEHAVIOUR
@@ -17,6 +18,10 @@ set encoding=utf-8
 
 set undofile            " Use undofile for persistent undo
 set undodir=~/.vimundo/ " set a directory to store the undo history
+set regexpengine=1      " improve syntaxhighlight performance
+set mouse=a
+
+
 
 " =====
 " LOOKS
@@ -84,12 +89,14 @@ endfunction
 call plug#begin('~/.vim/plugged')
 
 " GENERAL
-Plug 'tpope/vim-surround'          " Wrap text easily
-Plug 'preservim/nerdtree'          " File browser
-Plug 'Xuyuanp/nerdtree-git-plugin' " Show git statusses in file browser
-Plug 'airblade/vim-gitgutter'      " Show git changes
-Plug 'godlygeek/tabular'           " Easy text align
-Plug 'ryanoasis/vim-devicons'      " File icons
+Plug 'tpope/vim-surround'                           " Wrap text easily
+Plug 'preservim/nerdtree'                           " File browser
+Plug 'Xuyuanp/nerdtree-git-plugin'                  " Show git statusses in file browser
+Plug 'airblade/vim-gitgutter'                       " Show git changes
+Plug 'godlygeek/tabular'                            " Easy text align
+Plug 'ryanoasis/vim-devicons'                       " File icons
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " Fast file finder
+Plug 'junegunn/fzf.vim'
 
 " HASKELL
 Plug 'neovimhaskell/haskell-vim'
@@ -225,6 +232,22 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " close vim if the only window left open is a NERDTree?
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" ===============
+" LEADER COMMANDS
+" ===============
+"
+let mapleader = "\<Space>"
+nnoremap <Leader>w :w              <CR>
+nnoremap <Leader>q :q!             <CR>
+nnoremap <Leader>p :Files          <CR>
+nnoremap <Leader>g :GFiles?<CR>
+nnoremap <Leader>f :Lines          <CR>
+nnoremap <Leader>/ :BLines         <CR>
+nnoremap <Leader>b :Buffers        <CR>
+nnoremap <Leader>n :NERDTreeToggle <CR>
+
+
 
 
 
